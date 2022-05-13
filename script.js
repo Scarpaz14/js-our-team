@@ -57,3 +57,47 @@ for (let i=0; i<member.length; i++){
 
     teamContainer.innerHTML+=worker;
 }
+
+// bonus
+
+const btnAdd= document.querySelector("#addMemberButton");
+btnAdd.addEventListener("click",
+function(){
+    const nome = document.getElementById("name").value;
+    const role = document.getElementById("role").value;
+    const imageWorker = document.getElementById("image").value;
+
+    const newMember =
+    {
+        imagePerson: "",
+        namePerson: "",
+        work: "",
+    }
+    newMember.namePerson=nome;
+    newMember.imagePerson=imageWorker;
+    newMember.work=role;
+    
+    const worker = `
+    <div class="team-card">
+    <div class="card-image">
+      <img
+        src="${newMember.imagePerson}"
+        alt="Wayne Barnett"
+      />
+    </div>
+    <div class="card-text">
+      <h3>${newMember.namePerson}</h3>
+      <p>${newMember.work}</p>
+    </div>
+  </div>
+</div>
+</div> 
+    `;
+
+    teamContainer.innerHTML+=worker;
+    
+}
+);
+
+
+
